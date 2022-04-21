@@ -1,0 +1,9 @@
+{ "users": [
+    {
+      "id": 1,
+      "username": "duncan",
+      "country": "australia",
+      "password": "123"
+    }
+]
+}

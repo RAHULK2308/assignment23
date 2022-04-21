@@ -1,0 +1,70 @@
+
+<div class=" container-fluid d-flex justify-content-center " style="margin-top: 70px;">
+    <div class="card" style="border: 0.5px solid darkslategrey; margin: 10px; width:600px">
+        <div class="card-body" style="padding: 2px;">
+            <h2 class="card-title">SignIn</h2>
+            <hr>
+            <form style="padding: 20px;" [formGroup]="signinForm">
+            
+           
+            <div class="form-input">
+                <label>Email </label>
+    
+                <span 
+                class="text-danger" 
+                *ngIf="signinForm.get('email')?.errors && 
+                    signinForm.get('email')?.hasError('required')">*</span>
+    
+                <input class="input" type="text" placeholder="email"  name="email" formControlName="email"
+                [class.invalid]="signinForm.get('email')?.invalid &&
+                (signinForm.get('email')?.dirty || signinForm.get('email')?.touched)"
+                [ngModel]="email">
+                <br>
+                <small class="text-danger"
+                *ngIf="signinForm.get('email')?.invalid && (signinForm.get('email')?.dirty || signinForm.get('email')?.touched)">
+                Enter Valid Email
+            </small>
+            </div>
+    
+           
+    
+           
+           
+    
+            <div class="form-input">
+                <label>Password </label>
+                
+                <span 
+                class="text-danger" 
+                *ngIf="signinForm.get('password')?.errors && 
+                    signinForm.get('password')?.hasError('required')">*</span>
+    
+                <input class="input"  style=" margin-left: 67px;" type="password" placeholder="Password"
+                 name="password"  formControlName="password"
+                 [class.invalid]="signinForm.get('password')?.invalid &&
+                 (signinForm.get('password')?.dirty || signinForm.get('password')?.touched)"
+                 [ngModel]="password">
+                 <br>
+                 <small class="text-danger"
+                 *ngIf=" signinForm.get('password')?.hasError('minlength') || (signinForm.get('password')?.dirty || signinForm.get('password')?.touched)">
+                 The minimum length for this field is 8 characters.
+             </small>
+    
+            </div>
+    
+          
+     
+      
+    
+            <div class="form-input">
+             
+                <input type="submit" [disabled]="!signinForm.valid" class="submit btn btn-primary" >
+            </div>
+           
+            
+            </form>
+    
+            
+          </div>
+    </div>
+    </div>

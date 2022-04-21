@@ -1,0 +1,59 @@
+
+
+form-input{
+    margin: 30px;
+   
+}
+
+label{
+    margin:10px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: 15px;
+}
+
+input{
+    margin:15px;
+    margin-left: 14vh;
+    width:35vh;
+    height: 32px;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 0px 0px;
+    
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+    border: 1px solid blue;
+    width:15vh;
+    height: 40px;
+     margin: 20px;
+}
+
+.btn:hover{
+    background-color: darkblue;
+    color: darkgray;
+}
+
+h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2px;
+}
+.invalid{
+    border: 1px solid red;
+}
+
+small{
+   margin-left: 150px;
+   color: red;
+}

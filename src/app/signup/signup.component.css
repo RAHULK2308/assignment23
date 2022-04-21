@@ -1,0 +1,61 @@
+
+
+form-input{
+    margin: 30px;
+   
+}
+
+label{
+    margin:10px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-size: 15px;
+}
+
+input{
+    margin:15px;
+    margin-left: 14vh;
+    width:35vh;
+    height: 32px;
+}
+
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 0px 0px;
+    
+}
+
+.submit{
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+    border: 1px solid darkblue;
+    width:15vh;
+    height: 40px;
+     margin: 20px;
+     box-shadow: 0px 0px 2px 2px;
+     margin-left: 90px;
+}
+
+.submit:hover{
+    background-color: darkblue;
+    color: darkgray;
+}
+
+h4{
+    font-family:'Courier New', Courier, monospace;
+    margin: 4px;
+    margin-top: 8px;
+    font-weight:600;
+
+}
+.invalid{
+    border: 1px solid red;
+}
+
+small{
+   margin-left: 150px;
+   color: red;
+}

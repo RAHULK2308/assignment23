@@ -1,0 +1,90 @@
+
+<div class=" container-fluid d-flex justify-content-center " style="margin-top: 50px;">
+    <div class="card" style="border: 0.5px solid darkslategrey; margin: 10px; width:600px">
+        <div class="card-body" style="padding: 2px;">
+            <h4 class="card-title">SignUp</h4>
+            <hr>
+            <form style="padding: 20px;" [formGroup]="signupForm" (ngSubmit)="adduser()">
+                <div class="form-input">
+                <label>Name </label>
+    
+                <span 
+                class="text-danger" 
+                *ngIf="signupForm.get('name')?.errors && 
+                    signupForm.get('name')?.hasError('required')">*</span>
+    
+                <input class="input"  type="text" placeholder="Name" name="name" formControlName="name" 
+                [class.invalid]="signupForm.get('name')?.invalid &&
+                (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)"
+                [(ngModel)]="user.username" >
+                <br>
+                <small class="text-danger"
+                *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">
+                Field is Required
+            </small>
+            </div>
+           
+           
+            <div class="form-input">
+                <label>Email </label>
+    
+                <span 
+                class="text-danger" 
+                *ngIf="signupForm.get('email')?.errors && 
+                    signupForm.get('email')?.hasError('required')">*</span>
+    
+                <input class="input" type="text" placeholder="email"  name="email" formControlName="email"
+                [class.invalid]="signupForm.get('email')?.invalid &&
+                (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)"
+                [(ngModel)]="user.email">
+                <br>
+                <small class="text-danger"
+                *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                Enter Valid Email
+            </small>
+            </div>
+    
+           
+    
+           
+           
+    
+            <div class="form-input">
+                <label>Password </label>
+                
+                <span 
+                class="text-danger" 
+                *ngIf="signupForm.get('password')?.errors && 
+                    signupForm.get('password')?.hasError('required')">*</span>
+    
+                <input class="input"  style=" margin-left: 67px;" type="password" placeholder="Password"
+                 name="password"  formControlName="password"
+                 [class.invalid]="signupForm.get('password')?.invalid &&
+                 (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)"
+                 [(ngModel)]="user.password">
+                 <br>
+                 <small class="text-danger"
+                 *ngIf=" signupForm.get('password')?.hasError('minlength') || (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                 The minimum length for this field is 8 characters.
+             </small>
+    
+            </div>
+    
+          
+     
+      
+    
+            <div class="form-input">
+             
+                <input type="submit" [disabled]="!signupForm.valid" class="submit btn btn-primary" >
+                <button type="button" class="btn btn-dark" (click)="signupForm.reset()">Reset</button>
+                
+            </div>
+           
+            
+            </form>
+    
+            
+          </div>
+    </div>
+    </div>
